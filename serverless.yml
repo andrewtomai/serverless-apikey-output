@@ -1,0 +1,23 @@
+service: test-service
+provider:
+  name: aws
+  runtime: nodejs12.x
+  apiKeys:
+    - myapikey
+
+functions:
+  test:
+    handler: handler.test
+    events:
+      - http:
+          path: /hello
+          method: get
+
+plugins:
+  - ./
+
+
+custom: 
+  apiKeyOutput:
+    keys:
+      - myapikeyOther

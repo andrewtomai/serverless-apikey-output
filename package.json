@@ -1,0 +1,36 @@
+{
+  "name": "serverless-apikey-output",
+  "version": "0.1.0",
+  "description": "A serverless plugin to output api key values",
+  "main": "index.js",
+  "repository": "https://github.com/andrewtomai/serverless-apikey-output",
+  "author": "Andrew Tomai <tomaiandrew@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "ramda": "^0.27.1",
+    "source-map-support": "^0.5.19"
+  },
+  "devDependencies": {
+    "@types/jest": "^26.0.13",
+    "@types/node": "^14.10.1",
+    "@types/serverless": "^1.72.6",
+    "jest": "^26.4.2",
+    "serverless": "^2.0.0",
+    "ts-jest": "^26.3.0",
+    "ts-node": "^9.0.0",
+    "typescript": "^4.0.2"
+  },
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "jest": {
+    "roots": ["<rootDir>/test"],
+    "testMatch": ["**/*.test.ts"],
+    "transform": {
+        "^.+\\.tsx?$": "ts-jest"
+    }
+  }
+}
