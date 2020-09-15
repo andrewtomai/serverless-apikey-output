@@ -1,7 +1,7 @@
 # Serverless Api Key Output Plugin
 
-[![npm](https://img.shields.io/npm/v/serverless-apikey-output.svg)](https://www.npmjs.com/package/serverless-apikey-output)
-[![license](https://img.shields.io/github/license/andrwetomai/serverless-apikey-output.svg)](https://github.com/andrewtomai/serverless-apikey-output/blob/master/LICENCE.MD)
+[![npm](https://img.shields.io/npm/v/serverless-apikey-output)](https://www.npmjs.com/package/serverless-apikey-output)
+[![license](https://img.shields.io/github/license/andrewtomai/serverless-apikey-output)](https://github.com/andrewtomai/serverless-apikey-output/blob/master/LICENCE.MD)
 
 A [serverless](https://serverless.com) plugin to store an API Key and it's value from your AWS CloudFormation Stack in a JSON file.
 
