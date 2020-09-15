@@ -2,14 +2,17 @@
   "name": "serverless-apikey-output",
   "version": "0.1.0",
   "description": "A serverless plugin to output api key values",
-  "main": "index.js",
   "repository": "https://github.com/andrewtomai/serverless-apikey-output",
   "author": "Andrew Tomai <tomaiandrew@gmail.com>",
   "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "dependencies": {
     "ramda": "^0.27.1",
-    "shelljs": "^0.8.4",
-    "source-map-support": "^0.5.19"
+    "shelljs": "^0.8.4"
   },
   "devDependencies": {
     "@types/jest": "^26.0.13",
