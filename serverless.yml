@@ -1,23 +1,24 @@
-service: test-service
+service: apikey-example
 provider:
   name: aws
   runtime: nodejs12.x
   apiKeys:
     - myapikey
+    - ${self:provider.stage}-test-key
+
+plugins:
+  - ./
 
 functions:
   test:
     handler: handler.test
     events:
       - http:
-          path: /hello
+          path: test
           method: get
 
-plugins:
-  - ./
-
-
-custom: 
+custom:
   apiKeyOutput:
     keys:
-      - myapikeyOther
+      - ${self:provider.stage}-test-key # only export one of the two keys created
+    file: test-keys/${self:provider.stage}.keys.json

@@ -1,4 +1,5 @@
 const R = require('ramda')
+const shell = require('shelljs');
 import { dirname } from 'path';
 import { mkdirSync, existsSync, writeFileSync, statSync } from 'fs';
 import * as Serverless from 'serverless';
@@ -51,7 +52,7 @@ export default class ServerlessApiKeyOutputPlugin {
         // recursively make directory until we reach the file
         const directory = dirname(filename);
         if (!existsSync(directory)) {
-            mkdirSync(directory, { recursive: true });
+            shell.mkdir('-p', directory);
         }
         if (!statSync(directory).isDirectory()) {
             throw new Error(`Expected ${directory} to be a directory`);

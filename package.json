@@ -8,6 +8,7 @@
   "license": "MIT",
   "dependencies": {
     "ramda": "^0.27.1",
+    "shelljs": "^0.8.4",
     "source-map-support": "^0.5.19"
   },
   "devDependencies": {
@@ -27,10 +28,14 @@
     "test:watch": "jest --watch"
   },
   "jest": {
-    "roots": ["<rootDir>/test"],
-    "testMatch": ["**/*.test.ts"],
+    "roots": [
+      "<rootDir>/test"
+    ],
+    "testMatch": [
+      "**/*.test.ts"
+    ],
     "transform": {
-        "^.+\\.tsx?$": "ts-jest"
+      "^.+\\.tsx?$": "ts-jest"
     }
   }
 }
